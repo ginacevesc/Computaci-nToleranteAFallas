@@ -1,0 +1,54 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Servidor Web:</title>
+            <style type="text/css">
+                h1{
+                    color:#FF0000;
+                    text-align:center;
+                }
+                h2{
+                    text-align:center;
+                }
+                input { 
+                    width: 90%;
+                    height: 30px;
+                    margin: 0.5rem;
+                }
+                form {
+                    width: 100%;
+                    max-width: 600px;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Servidor Alumnos</h1>
+            <h2>Agregar alumno:</h2>
+            <form action="/alumnos" method="POST" id="alumnosform">
+                <label>Nombre del alumno:</label><br>
+                <input type="text" name="nombre" value="">
+                <br><label>Nombre de la materia:</label><br>
+                <input type="text" name="materia" value="">
+                <br><label>Calificacion:</label><br>
+                <input type="text" name="calificacion" value="">
+                <br><input type="submit" value="Agregar">
+            </form>
+            <h2>Promedio Alumno</h2>
+            <form action="/promedioAlumno" method="POST" id="alumnoProm">
+                <label>Nombre del alumno:</label><br>
+                <input type="text" name="nombre" value="">
+                <br><input type="submit" value="Consultar">
+            </form>
+            <h2>Promedio por Materia</h2>
+            <form action="/promedioMateria" method="POST" id="materiaProm">
+                <label>Nombre de la materia:</label><br>
+                <input type="text" name="nombre" value="">
+                <br><input type="submit" value="Consultar">
+            </form>
+        </body>
+    </html>
